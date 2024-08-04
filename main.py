@@ -75,7 +75,7 @@ def main():
         page = browser.new_page()
 
         page.goto("https://www.google.com/maps", timeout=60000)
-        page.wait_for_timeout(4000)
+        page.wait_for_timeout(4500)
 
         for search_for_index, search_for in enumerate(search_list):
             print(f"-----\n{search_for_index} - {search_for}".strip())
