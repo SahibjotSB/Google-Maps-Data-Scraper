@@ -75,16 +75,16 @@ def main():
         page = browser.new_page()
 
         page.goto("https://www.google.com/maps", timeout=60000)
-        page.wait_for_timeout(5000)
+        page.wait_for_timeout(4000)
 
         for search_for_index, search_for in enumerate(search_list):
             print(f"-----\n{search_for_index} - {search_for}".strip())
 
             page.locator('//input[@id="searchboxinput"]').fill(search_for)
-            page.wait_for_timeout(3000)
+            page.wait_for_timeout(2000)
 
             page.keyboard.press("Enter")
-            page.wait_for_timeout(5000)
+            page.wait_for_timeout(3000)
 
             page.hover('//a[contains(@href, "https://www.google.com/maps/place")]')
 
